@@ -344,7 +344,7 @@ li:hover{
 <li><a id="name"> Kristene Ampa </a> </li>
 <li><a id="aray"> 2  </a> </li>
 <li><a id="aray"> 10 </a> </li>
-<li><a id="aray"> Village 11 </a> </li>
+<li><a id="aray"> <a class="text-decoration-none">Village 11 </a> </li>
 <li><a id="aray"> Unsold</a> </li>
 <li><a id="none"> None </a> </li>
 <li><a id="none-1"> None</a> </li>

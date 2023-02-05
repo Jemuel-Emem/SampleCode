@@ -9,17 +9,15 @@
 </head>
 <body class="bg-warning">
     <div class="container p-5">
-        <form action="insert" method="POST">
+        <form action="insert" method="get">
             @csrf
-
         <div class="row justify-content-center ">
 
             <div class="col-md-4 col-md-offset-4 p-5 bg-primary-subtle rounded form-group">
 
-                <h1 class="samplename"> Insert data</h1>
+                <h1 class="samplename"> Retrieve data</h1>
                 <hr>
-                <label for="name" class="sample d-flex"> Enter name</label>
-                <input type="text" class="form-control" placeholder="enter name" value="" name="name">
+
 
                 <label for="email" class="sample d-flex"> Enter email</label>
                 <input type="text" class="form-control" placeholder="enter name" value="" name="email">
@@ -28,12 +26,27 @@
                 <input type="password" class="form-control" placeholder="enter password" value="" name="password">
 
 <div class="form-group d-flex justify-content-center p-3">
-                <button class="btn btn-block btn bg-info " type="submit">Save</button>
+                <button class="btn btn-block btn bg-info " type="submit">View</button>
             </div>
+
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>password</td>
+                </tr>
+
+                @foreach ($users as $user)
+                <tr>
+                    <td>{{ $user ->name }}</td>
+                    <td>{{ $user ->email }}</td>
+                    <td>{{ $user ->password }}</td>
+                </tr>
+                @endforeach
+            </table>
             </div>
 
             </form>
-
 
 
 

@@ -31,6 +31,13 @@ Route :: get('/register', [AuthController::class,'register']);
 Route :: get('/insert', [inserController::class,'insert']);
 Route ::post('insert',[inserController::class, 'add']);
 
+Route :: get('/ret', [inserController::class,'retrieve']);
+Route :: get('/showdata', [inserController::class,'show']);
+
+Route :: get('edit/{id}', [inserController::class,'edit']);
+Route :: put('update_data/{id}', [inserController::class,'update']);
+
+
 
 Route::post('/register-user', [AuthController::class, 'registerUser']) ->name('register-user');
 

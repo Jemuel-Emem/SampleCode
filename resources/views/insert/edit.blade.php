@@ -9,31 +9,30 @@
 </head>
 <body class="bg-warning">
     <div class="container p-5">
-        <form action="insert" method="POST">
+        <form action="{{ url('update_data/' .$data->id) }}" method="POST">
+            @method('PUT')
             @csrf
-
         <div class="row justify-content-center ">
 
             <div class="col-md-4 col-md-offset-4 p-5 bg-primary-subtle rounded form-group">
 
-                <h1 class="samplename"> Insert data</h1>
+                <h1 class="samplename"> Update data</h1>
                 <hr>
                 <label for="name" class="sample d-flex"> Enter name</label>
-                <input type="text" class="form-control" placeholder="enter name" value="" name="name">
+                <input type="text" class="form-control" placeholder="enter name" value="{{ $data ->name }}" name="name">
 
                 <label for="email" class="sample d-flex"> Enter email</label>
-                <input type="text" class="form-control" placeholder="enter name" value="" name="email">
+                <input type="text" class="form-control" placeholder="enter name" value="{{ $data ->email }}" name="email">
 
                 <label for="password" class="sample d-flex"> Enter password</label>
-                <input type="password" class="form-control" placeholder="enter password" value="" name="password">
+                <input type="password" class="form-control" placeholder="enter password" value="{{ $data ->password }}" name="password">
 
 <div class="form-group d-flex justify-content-center p-3">
-                <button class="btn btn-block btn bg-info " type="submit">Save</button>
+                <button class="btn btn-block btn bg-info " type="submit">Update</button>
             </div>
             </div>
 
             </form>
-
 
 
 
